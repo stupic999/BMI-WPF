@@ -29,20 +29,23 @@ namespace WpfApplication1
         {
             this.Close();
         }
-
+ 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            
+            double height = double.Parse(textBox1.Text);
+            double weight = double.Parse(textBox2.Text);
+            double BMI = weight * 10000 / (height * height);
+            text.Text = "你的BMI數值是" + BMI.ToString();
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-
+            textBox1.Text = "";
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-
+            textBox2.Text = "";
         }
     }
 }
